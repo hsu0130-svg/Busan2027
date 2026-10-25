@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-Hant"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="釜山行">
+<meta name="theme-color" content="#1e5fb8">
+<title>釜山自由行 2027</title>
+<style>
+:root{--bg:#f3f6fb;--card:#fff;--tx:#1b2433;--mu:#617089;--pr:#1e5fb8;--ac:#e0364a;--bd:#dde5f0;--chip:#eaf1fb;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1624;--card:#18223a;--tx:#e8eefb;--mu:#9aa9c4;--pr:#6aa6ff;--ac:#ff7a8a;--bd:#2a3856;--chip:#223356}}
+:root[data-theme="dark"]{--bg:#0f1624;--card:#18223a;--tx:#e8eefb;--mu:#9aa9c4;--pr:#6aa6ff;--ac:#ff7a8a;--bd:#2a3856;--chip:#223356}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.55 -apple-system,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;padding-bottom:calc(80px + env(safe-area-inset-bottom,0px))}
+header{background:linear-gradient(135deg,#1e5fb8,#3a3f9e);color:#fff;padding:18px 18px 16px}
+header h1{margin:0 0 4px;font-size:22px}header p{margin:0;opacity:.9;font-size:14px}
+main{padding:14px;max-width:720px;margin:auto}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:16px;margin-bottom:14px}
+h2{margin:0 0 8px;font-size:18px}h3{margin:14px 0 6px;font-size:15px;color:var(--pr)}
+.mu{color:var(--mu);font-size:14px}
+.days{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.days button{flex:1 1 28%;border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:12px;padding:8px 14px;font:inherit;font-size:14px}
+.days button.on{background:var(--pr);color:#fff;border-color:var(--pr)}
+.stop{display:flex;gap:10px;padding:10px 0;border-top:1px solid var(--bd)}
+.stop:first-of-type{border-top:0}
+.leg{margin:4px 0 4px 6px;padding:4px 0 4px 10px;border-left:3px dashed var(--bd);color:var(--mu);font-size:13px}
+.tm{flex:0 0 58px;color:var(--ac);font-weight:700;font-size:14px}
+.stop b{display:block}
+.btns{margin-top:6px;display:flex;flex-wrap:wrap;gap:6px}
+a.m{display:inline-block;text-decoration:none;font-size:12px;padding:3px 10px;border-radius:999px;background:var(--chip);color:var(--pr);border:1px solid var(--bd)}
+a.m.n{color:#0a9a4a}
+.tag{display:inline-block;font-size:12px;padding:2px 9px;border-radius:999px;background:var(--chip);color:var(--pr);margin:0 4px 4px 0}
+.warn{background:rgba(224,54,74,.1);border:1px solid var(--ac);border-radius:12px;padding:10px 12px;font-size:14px;margin-top:8px}
+.item{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-top:1px solid var(--bd)}
+.item input{width:22px;height:22px;margin-top:2px;flex:0 0 auto}
+.bar{height:8px;background:var(--chip);border-radius:8px;overflow:hidden;margin:6px 0 10px}.bar i{display:block;height:100%;background:var(--pr);width:0}
+nav{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--bd);display:flex;padding-bottom:env(safe-area-inset-bottom,0px)}
+nav a{flex:1;text-align:center;text-decoration:none;color:var(--mu);font-size:11px;padding:8px 0 6px}
+nav a span{display:block;font-size:20px}nav a.on{color:var(--pr);font-weight:700}
+ul{padding-left:20px;margin:6px 0}li{margin-bottom:4px}
+.big{font-size:34px;font-weight:800;color:var(--pr)}
+.tabbtn{border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:10px;padding:6px 12px;font:inherit;font-size:13px;float:right}
+:root{--bg:#f2f9fb;--pr:#2f8fd0;--c0:#e3f6ee;--a0:#2a9d74;--c1:#e0effc;--a1:#3584d4;--c2:#fde6ee;--a2:#d65a86;--c3:#fdf0d4;--a3:#d98b2b;--c4:#ebe5fb;--a4:#7560cf}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--c0:#1a3a30;--a0:#5fd3a8;--c1:#1b3047;--a1:#6db6f5;--c2:#43202f;--a2:#f08fb0;--c3:#43341a;--a3:#f0b865;--c4:#2b2548;--a4:#a99af0}}
+:root[data-theme="dark"]{--c0:#1a3a30;--a0:#5fd3a8;--c1:#1b3047;--a1:#6db6f5;--c2:#43202f;--a2:#f08fb0;--c3:#43341a;--a3:#f0b865;--c4:#2b2548;--a4:#a99af0}
+.d0{--dc:var(--a0);--db:var(--c0)}.d1{--dc:var(--a1);--db:var(--c1)}.d2{--dc:var(--a2);--db:var(--c2)}.d3{--dc:var(--a3);--db:var(--c3)}.d4{--dc:var(--a4);--db:var(--c4)}
+header{background:linear-gradient(135deg,#5cb8ea,#7fd6b8);border-radius:0 0 26px 26px}
+.card{border-radius:20px}
+.blk{background:var(--db);border:1px solid var(--dc);border-left:7px solid var(--dc)}
+.blk h2,.blk h3,.blk .tm{color:var(--dc)}
+.blk .stop{border-top:1px dashed var(--dc)}
+.blk .leg{border-left-color:var(--dc)}
+.blk a.m,.blk .tag{background:var(--card);color:var(--dc);border-color:var(--dc)}
+.blk .warn{background:var(--card);border-color:var(--dc)}
+.days button{background:var(--db);border:2px solid var(--db);font-weight:600}
+.days button.on{background:var(--dc);border-color:var(--dc);color:#fff}
+nav a.on{color:var(--pr)}
+</style></head><body>
+<header><button class="tabbtn" id="th">🌓</button><h1>釜山自由行 🌊🐚</h1><p>2027.02.01(一) – 02.05(五)・星宇 JX900 / JX901・東橫INN 西面</p></header>
+<main id="v"></main>
+<nav id="nv"></nav>
+<script>
+const N=q=>'https://map.naver.com/p/search/'+encodeURIComponent(q);
+const G=q=>'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q);
+const L=q=>`<a class="m n" href="${N(q)}" target="_blank" rel="noopener">Naver Map</a><a class="m" href="${G(q)}" target="_blank" rel="noopener">Google Map</a>`;
+const D=[
+{t:'入境・抵達西面',s:'金海機場 → 西面',x:[
+['08:25','JX900 起飛','11:30 抵達金海（PUS）','Gimhae International Airport'],
+['11:30','入境・領行李・領釜山 PASS・取 SIM','','김해공항 국제선 도착층'],
+['13:00','前往西面','','서면역 12번 출구'],
+['14:30','飯店寄放行李','16:00 入住','토요코인 부산서면'],
+['17:00','西面晚餐・逛街','','서면 지하상가']]},
+{t:'海東龍宮寺 → Skyline Luge → 廣安里',s:'機張一日',x:[
+['09:00','前往海東龍宮寺','','해동용궁사'],
+['10:00','海東龍宮寺','','해동용궁사'],
+['14:30','Skyline Luge（午餐後）','平日 10:00–19:00','스카이라인 루지 부산'],
+['16:30','（選）樂天世界冒險釜山','時間充裕再去','롯데월드 어드벤처 부산'],
+['18:00','民樂水邊公園（廣安里）','','민락수변공원']]},
+{t:'膠囊列車 → 青沙浦 → 海岸列車 → X the SKY → Spa Land',s:'海雲台一日',x:[
+['09:30','海景膠囊列車（尾浦→青沙浦）','','해운대 블루라인파크 미포 정거장'],
+['11:00','青沙浦平交道','','청사포 건널목'],
+['11:30','青沙浦天空步道','','청사포 다릿돌전망대'],
+['12:30','海岸列車（青沙浦→尾浦）','','해운대 블루라인파크 해변열차'],
+['15:30','BUSAN X the SKY','','부산 엑스 더 스카이'],
+['18:30','Spa Land Centum City','','센텀시티 스파랜드']]},
+{t:'松島纜車 → 甘川洞 → 南浦洞 → 樂天超市',s:'全程 Uber',x:[
+['09:30','松島海上纜車（來回）','PASS 內含；2 樓雷射槍 10:00 開始營業（選）','송도해상케이블카'],
+['11:00','松島龍宮雲橋・天空步道','','송도 용궁구름다리'],
+['12:30','午餐・153 龜浦麵條松島店','','153 구포국수 송도'],
+['14:00','甘川文化村','PASS 體驗（韓服、手翻書拍照）看時間使用','감천문화마을',[['甘川文化村服務中心','釜山廣域市 沙下區 甘川洞 1-14','FmG1vwK1'],['甘川文化村小王子','釜山廣域市 沙下區 甘川洞 2-394','xKyZgjoU'],['咖啡 Itjip','釜山廣域市 沙下區 甘川洞 10-62','FgEs4miB'],['Ipgo 店鋪','釜山廣域市 沙下區 甘川洞 2-9','x9Vhojhr'],['Cheolsuwa Yeonghui','釜山廣域市 沙下區 甘川洞 9-64','GwfbK33R'],['Umjigineun 照片商店','釜山廣域市 沙下區 甘川洞 2-178','5p0uuq4C']]],
+['17:00','南浦洞商圈・晚餐（待定）','BIFF 廣場・國際市場・札嘎其','남포동 BIFF광장'],
+['19:30','樂天超市採買','','롯데마트 부산']]},
+{t:'返程',s:'回台灣',x:[
+['08:15','退房・前往機場','','김해공항 국제선'],
+['10:00','辦理登機・退稅','','김해공항 국제선 출발층'],
+['12:30','JX901 起飛','14:15 抵達桃園（TPE）','Gimhae International Airport']]}
+];
+const F=[
+['🍲 豆腐鍋／純豆腐','순두부찌개 서면','soon','辣度可選，適合冬天'],
+['🍲 豆腐鍋／純豆腐','두부전골 서면','soon','清爽不辣的選擇'],
+['🍜 炸醬麵','서면 짜장면 중국집','jja','中華料理店，也有糖醋肉'],
+['🍜 炸醬麵','서면 짬뽕 짜장면 맛집','jja','可搭海鮮辣湯麵'],
+['🍥 非韓式','서면 라멘','non','日式拉麵'],
+['🍥 非韓式','서면 돈카츠','non','日式炸豬排'],
+['🍥 非韓式','서면 파스타','non','義大利麵／西餐'],
+['🍥 非韓式','서면 수제버거','non','漢堡'],
+['☕ 咖啡甜點','서면 카페','cafe','田浦咖啡街一帶也不錯']];
+const C=[
+['⏰ 重要時間點（台灣時間）',['<b>1/5（二）06:00</b>｜膠囊列車官網開放預約（2/1–2/7 該週），備 2–3 個時段','<b>1/29 10:30 起</b>｜e-Arrival 電子入境卡，建議 1/31 晚上填','<b>1/30 08:25 起</b>｜JX900 網路報到、選位','<b>2/3 11:30 起</b>｜JX901 網路報到、選位','<b>釜山 PASS</b>｜2/2 Luge 14:30 啟動，2/4 14:30 到期，甘川體驗看時間使用','<b>K-ETA</b>｜2027 年是否需申請，出發前一個月確認']],
+['證件、支付與網路',['護照效期 6 個月以上','投保旅遊險與不便險','預約信用卡機場接送（2/1 建議 05:30 到機場，回程另約）','入境卡備案：帶筆，手機存護照照片，長輩與小孩由誰協助先說好','電子入境卡填完後，另一人核對護照號碼','購買 SIM／eSIM 並測試','韓元現金與信用卡','下載 Naver Map、Papago','機票、訂房確認信存手機']],
+['訂位與票券',['Skyline Luge（PASS 免購票）確認 2/2 營業','預約膠囊列車、海岸列車','確認釜山 PASS 取票方式','確認 Spa Land 營業時間與免費時數']],
+['行李與保暖',['保暖外套、發熱衣、手套、圍巾','好走的鞋','插頭（220V 圓孔雙腳）與行動電源','藥品與個人用品','退稅單據保留']]];
+const DR=[
+['2/2（二）','廣安里（水營區）',[
+['Peisendong 廣安里店','','釜山廣域市 水營區 民樂洞 218-3','5g4ezyD0'],
+['Hansot 便當 民樂水邊公園店','便當','釜山廣域市 水營區 民樂洞 181-88','5DZ1deqO']]],
+['2/2（二）','機張・龍宮寺一帶',[
+['兔子大排檔','','釜山廣域市 機張郡 機張邑 侍郎里 175-8','GcA2ss4S'],
+['拉麵 Hotaru','拉麵','釜山廣域市 機張郡 機張邑 侍郎里 173-2','xONyw4Vh'],
+['龍宮海鮮蔬菜盤炸醬','炸醬','釜山廣域市 機張郡 機張邑 侍郎里 393-6','xuFbYcFG']]],
+['2/3（三）','海雲台・尾浦・青沙浦',[
+['Chosun Daega 牛骨湯 海雲台尾浦店','牛骨湯','釜山廣域市 海雲台區 中洞 946-1','5B0TvMBJ'],
+['Geosong 燉排骨 海雲台站','燉排骨','釜山廣域市 海雲台區 中洞 948-7','Fto1zjhi'],
+['Taiga Tenpura & Macheudo','天婦羅','釜山廣域市 海雲台區 中洞 1013-1','5VxWCIzF'],
+['Choryang 小麥麵 尾浦店','麵食','釜山廣域市 海雲台區 中洞 1037-2','5WU5suw5'],
+['Geukdong 豬肉湯飯','湯飯','釜山廣域市 海雲台區 中洞 948-7','5YoGCfeS'],
+['青沙浦米粉總店','米粉','釜山廣域市 海雲台區 中洞 577','x1ut1BZW']]],
+['2/4（四）','松島',[
+['153 龜浦麵條 釜山松島店','麵食','釜山廣域市 西區 岩南洞 123-27','5kPpFj3l']]]];
+function dayFood(){const ix={'2/2':1,'2/3':2,'2/4':3};return `<h2 style="margin:4px 4px 10px">各日餐廳</h2>`+DR.map(g=>`<div class="card blk d${ix[g[0].slice(0,3)]}"><h3 style="margin-top:0">${g[0]} ${g[1]}</h3>${g[2].map(r=>`<div style="margin:10px 0">${r[1]?`<span class="tag">${r[1]}</span>`:''}<b>${r[0]}</b><div class="mu">${r[2]}</div><div class="btns"><a class="m n" href="https://naver.me/${r[3]}" target="_blank" rel="noopener">Naver Map</a><a class="m" href="${G(r[0]+' '+r[2])}" target="_blank" rel="noopener">Google Map</a></div></div>`).join('')}</div>`).join('')}
+
+const A=['김해국제공항 국제선','Gimhae Int\'l Airport (PUS)','부산 강서구 공항진입로 108'];
+const KO={'Gimhae International Airport':A,'김해공항 국제선 도착층':A,'김해공항 국제선':A,'김해공항 국제선 출발층':A,
+'서면역 12번 출구':['서면역 12번 출구','Seomyeon Stn. Exit 12','부산 부산진구 부전동 (1·2호선)'],'서면역':['서면역','Seomyeon Station','부산 부산진구 부전동 (1·2호선)'],
+'토요코인 부산서면':['토요코인 부산서면','Toyoko Inn Busan Seomyeon','부산 부산진구 서전로 39 (39, Seojeon-ro, Busanjin-gu)'],'서면 지하상가':['서면 지하상가','Seomyeon Underground Shopping Center','부산 부산진구 부전동'],
+'해동용궁사':['해동용궁사','Haedong Yonggungsa Temple','부산 기장군 기장읍 용궁길 86'],'스카이라인 루지 부산':['스카이라인 루지 부산','Skyline Luge Busan','부산 기장군 기장읍 기장해안로 205'],
+'광안리해수욕장':['광안리해수욕장','Gwangalli Beach','부산 수영구 광안해변로 219'],'해운대 블루라인파크 미포 정거장':['해운대 블루라인파크 미포정거장','Haeundae Blueline Park Mipo Stn.','부산 해운대구 달맞이길62번길 13'],
+'청사포 건널목':['청사포 건널목','Cheongsapo Railway Crossing','부산 해운대구 청사포로 116 (청사포정거장 인근)'],'해운대 블루라인파크 해변열차':['해운대 해변열차','Haeundae Beach Train','미포·청사포·송정 정거장 (청사포정거장: 청사포로 116)'],
+'해운대해수욕장':['해운대해수욕장','Haeundae Beach','부산 해운대구 해운대해변로 264'],'부산 엑스 더 스카이':['부산 엑스 더 스카이','BUSAN X the SKY','부산 해운대구 달맞이길 30 (엘시티)'],
+'센텀시티 스파랜드':['센텀시티 스파랜드','Spa Land Centum City','부산 해운대구 센텀남대로 35 (신세계 센텀시티)'],'송도해상케이블카':['송도해상케이블카','Songdo Marine Cable Car','부산 서구 송도해변로 171'],
+'송도 용궁구름다리':['송도 용궁구름다리','Songdo Yonggung Cloud Bridge','부산 서구 암남동 (송도해수욕장 일대)'],'송도 구름산책로':['송도 구름산책로','Songdo Cloud Walk','부산 서구 암남동 (송도해수욕장 일대)'],
+'감천문화마을':['감천문화마을','Gamcheon Culture Village','부산 사하구 감내2로 203'],'남포동 BIFF광장':['BIFF광장','BIFF Square (Nampo-dong)','부산 중구 남포동'],'롯데마트 부산':['롯데마트','Lotte Mart','分店地址請用 Naver 確認']};
+KO['민락수변공원']=['민락수변공원','Millak Waterside Park','부산 수영구 민락동 (민락수변공원)'];
+KO['153 구포국수 송도']=['153 구포국수 송도점','153 Gupo Guksu Songdo','부산 서구 암남동 123-27'];
+KO['청사포 다릿돌전망대']=['청사포 다릿돌전망대','Cheongsapo Daritdol Skywalk','부산 해운대구 청사포로 (청사포 일대)'];
+KO['롯데월드 어드벤처 부산']=['롯데월드 어드벤처 부산','Lotte World Adventure Busan','부산 기장군 기장읍 시랑리 348-67'];
+const LG=[
+['','','🚇 機場輕軌（₩1,600）→ 沙上站轉 2 號線（₩1,600）→ 西面站 12 號出口（有電梯）','🚶 步行至飯店','🚶 步行'],
+['🚇 西面站 8 或 10 號出口 → 釜山大學站轉東海線 → 奧西利亞站 1 號出口，₩1,800/人<br>🚕 奧西利亞站 → 龍宮寺 Uber 約 ₩7,000/車（7 分）<br>🚌 備案：奧西利亞站（오시리아역）站牌搭 139／1001，2 站到「용궁사.국립수산과학원」，步行約 10 分','','🚶 龍宮寺 → Luge 約 11 分，或 🚕 Uber ₩4,800','🚕 Luge → 樂天世界 Uber ₩4,800 起（步行 10–20 分）<br>🚇 奧西利亞站 1 號出口步行約 10 分','🚕 Uber ₩15,500/車（從 Luge 或樂天世界出發）'],
+['🚇 西面站 8 或 10 號出口 → 中洞站（2 號線）7 號出口，₩1,800/人<br>🚶 約 15–20 分，或 🚕 Uber ₩4,800/車到尾浦站','🚃 膠囊列車（₩5,500×2）','🚶 步行','🚃 海岸列車','🚶 步行','🚇 中洞站或海雲台站 → Centum City 站（2 號線）12 號出口，₩1,600/人<br>🚶 約 1–5 分'],
+['🚕 旅館 → 松島纜車入口 Uber 約 ₩16,000/車','🚶 步行','🚶 步行或 🚕 Uber ₩4,800 起','🚕 Uber ₩6,500/車<br>🚌 備案：土城站（1 號線）6 號出口，右轉步行 2–3 分到「釜山大學醫院」站牌，搭小巴 사하구1-1／서구2／서구2-2，「감정초등학교」下車，約 10–15 分','🚕 Uber 約 ₩8,000/車','🚕 Uber 約 ₩5,000/車'],
+['🚇 西面站 8 或 10 號出口 → 沙上站轉輕軌 → 金海機場，₩2,100/人（約 50–60 分）','','']];
+const RET=['','🚕 Uber 民樂水邊公園 → 旅館 ₩9,100/車<br>🚌 備案：🚕 Uber 到廣安站（₩4,800 起）→ 🚇 2 號線 ₩1,600/人 → 西面站 8 或 10 號出口','🚕 Spa Land → 地鐵站 Uber ₩4,800/車<br>🚇 Centum City → 西面站 8 或 10 號出口，₩1,600/人','🚕 Uber 樂天超市 → 旅館 ₩10,900/車',''];
+const EST=['₩3,200/人','地鐵 ₩1,800/人・Uber ₩36,400/車','地鐵 ₩5,000/人・Uber ₩9,600/車・膠囊 ₩11,000','Uber 約 ₩46,400/車','₩2,100/人'];
+const TX='';
+const V=document.getElementById('v'),NV=document.getElementById('nv');
+const tabs=[['overview','🧭','總覽'],['itin','🗓','行程'],['stay','🛏','住宿'],['food','🍜','美食'],['list','✅','清單'],['wx','🌤','天氣']];
+let day=0;
+function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
+const R={
+overview(){return `<div class="card"><h2>航班</h2><b>去程 JX900</b>　2/1 08:25 TPE → 11:30 PUS<br><b>回程 JX901</b>　2/5 12:30 PUS → 14:15 TPE</div>
+<div class="card"><h2>注意事項</h2><ul><li>K-ETA：免申請期限到 2026/12/31，出發前查最新規定</li><li>春節約 2/6–2/8，2/5 人潮較多</li><li>2 月約 0–5°C，海邊風大，纜車與露天設施可能停駛</li><li>報警 112、救護 119、旅遊諮詢 1330（可中文）</li></ul></div>
+<div class="card"><h2>🛂 入境卡備案</h2><h3>可直接抄</h3><ul><li>入境日期：2027-02-01</li><li>航班：JX900 STARLUX，Taipei (TPE) → Busan Gimhae (PUS)</li><li>出發地／國籍：Taipei, Taiwan／Taiwan</li><li>目的：Tourism</li><li>停留：4 晚，2027-02-05 搭 JX901 離境</li><li>住址：Toyoko Inn Busan Seomyeon, 39 Seojeon-ro, Busanjin-gu, Busan 47247<br>부산 부산진구 서전로 39</li><li>旅館電話：+82-51-638-1045</li></ul>
+<h3>從護照抄</h3><ul><li>英文姓名、護照號碼、出生日期、性別、護照效期</li></ul>
+<h3>易錯</h3><ul><li>護照號碼：字母 O／數字 0、字母 I／數字 1</li><li>每人一份，代填後本人核對</li><li>紙本：大寫英文、黑或藍筆，拼法同護照</li></ul></div>
+<div class="card"><h2>🧾 交通費</h2><ul><li>6 人・2 台 Uber</li><li>交通卡每人 ₩12,100，建議儲值 ₩15,000</li><li>Uber ≈₩184,800（2/2 ₩72,800、2/3 ₩19,200、2/4 ≈₩92,800）</li><li>膠囊列車 ₩11,000</li><li>合計 ≈₩268,400</li></ul></div>
+<div class="card"><h2>釜山 PASS</h2><ul><li>首次掃描起連續 48 小時</li><li>2/2 Luge 14:30 啟動，2/4 14:30 到期</li><li>PASS 項目：Luge、海岸列車、X the SKY、Spa Land、松島纜車、甘川洞文化村體驗</li></ul></div>
+<div class="card"><h2>加到手機桌面</h2><b>iPhone</b>：Safari → 分享 → 加入主畫面<br><b>Android</b>：Chrome → 選單 → 加到主畫面</div>`},
+itin(){const o=D[day];return `<div class="days">${D.map((_,i)=>`<button class="d${i} ${i==day?'on':''}" data-d="${i}">2/${i+1}（${'一二三四五'[i]}）</button>`).join('')}</div>
+<div class="card blk d${day}"><div class="mu" style="color:var(--dc);font-weight:700">2027.02.0${day+1}（${'一二三四五'[day]}）</div><h2>${o.t}</h2><div class="mu">${o.s}</div>
+${o.x.map((s,i)=>`${(LG[day]||[])[i]?`<div class="leg">${LG[day][i]}</div>`:''}<div class="stop"><div class="tm">${s[0]}</div><div><b>${s[1]}</b><span class="mu">${s[2]}</span>${KO[s[3]]?`<div class="mu" style="margin-top:4px">${KO[s[3]][0]}・${KO[s[3]][1]}<br>📍 ${KO[s[3]][2]}</div>`:''}<div class="btns">${L(s[3])}</div>${s[4]?s[4].map(p=>`<div style="margin-top:10px"><b>📍 ${p[0]}</b><div class="mu">${p[1]}</div><div class="btns"><a class="m n" href="https://naver.me/${p[2]}" target="_blank" rel="noopener">Naver Map</a><a class="m" href="${G(p[0]+' '+p[1])}" target="_blank" rel="noopener">Google Map</a></div></div>`).join(''):''}</div></div>`).join('')}
+${RET[day]?`<div class="leg">${RET[day]}</div>`:''}<div class="warn">🧾 ${EST[day]}</div>${day==3?TX:''}</div>`},
+stay(){return `<div class="card"><h2>東橫INN 釜山西面</h2><div class="mu">부산 부산진구 서전로 39<br>39, Seojeon-ro, Busanjin-gu, Busan 47247</div><div class="btns">${L('토요코인 부산서면')}<a class="m n" href="${N('부산 부산진구 서전로 39')}" target="_blank" rel="noopener">Naver 地址</a><a class="m" href="${G('39 Seojeon-ro, Busanjin-gu, Busan')}" target="_blank" rel="noopener">Google 地址</a></div><div class="mu" style="margin-top:6px">西面站：2/1 走 12 號出口（有電梯），其他天 8 或 10 號出口較近（待確認）。<br>電話：<a href="tel:+82516381045" style="color:var(--pr)">+82-51-638-1045</a></div>
+<h3>入住提醒</h3><ul><li>一般 16:00 入住、10:00 退房，請以確認信為準</li><li>提早抵達可先寄放行李</li><li>房間通常含簡易早餐，請確認方案</li></ul>
+<h3>附近逛街</h3>${[['西面地下街','서면지하상가'],['樂天百貨西面','롯데백화점 부산본점'],['田浦咖啡街','전포카페거리'],['西面站','서면역']].map(a=>`<div style="margin:6px 0"><b>${a[0]}</b><div class="btns">${L(a[1])}</div></div>`).join('')}</div>`},
+food(){return dayFood()+`<div class="card blk d0"><h2>2/1（一）西面附近美食</h2>
+${[...new Set(F.map(f=>f[0]))].map(g=>`<h3>${g}</h3>${F.filter(f=>f[0]==g).map(f=>`<div style="margin:8px 0"><span class="tag">${f[2]=='non'?'非韓式':f[2]=='soon'?'豆腐鍋':f[2]=='jja'?'炸醬麵':'咖啡'}</span><b>${f[1]}</b><span class="mu"> ・ ${f[3]}</span><div class="btns">${L(f[1])}</div></div>`).join('')}`).join('')}</div>`},
+list(){let tot=0,done=0,h='';C.forEach((g,gi)=>{h+=`<h3>${g[0]}</h3>`;g[1].forEach((t,i)=>{tot++;const k='c'+gi+'_'+i,on=ls(k)==='1';if(on)done++;h+=`<label class="item"><input type="checkbox" data-k="${k}" ${on?'checked':''}><span>${t}</span></label>`})});
+return `<div class="card"><h2>行前待辦清單</h2><div class="mu">勾選狀態只存在這支手機的瀏覽器。</div><b id="pg">${done} / ${tot} 完成</b><div class="bar"><i id="pb" style="width:${done/tot*100}%"></i></div>${h}</div>`},
+wx(){return `<div class="card"><h2>釜山天氣</h2><div class="mu">2 月常態：白天約 5–10°C、夜間約 0–3°C，海風明顯，穿洋蔥式。</div>
+<h3>即時預報（點擊開啟）</h3><div class="btns">
+<a class="m" href="https://www.google.com/search?q=%E9%87%9C%E5%B1%B1+%E5%A4%A9%E6%B0%A3" target="_blank" rel="noopener">Google 釜山天氣</a>
+<a class="m" href="https://search.naver.com/search.naver?query=%EB%B6%80%EC%82%B0+%EB%82%A0%EC%94%A8" target="_blank" rel="noopener">Naver 부산 날씨</a>
+<a class="m" href="https://www.windy.com/35.18/129.07" target="_blank" rel="noopener">Windy 風速圖</a>
+<a class="m" href="https://www.weather.go.kr" target="_blank" rel="noopener">韓國氣象廳</a></div>
+<div class="warn">風速大時松島纜車、Skyline Luge 可能停駛，出發前一天與當天早上請看預報。</div>
+<h3>穿搭</h3><ul><li>發熱衣＋毛衣＋防風外套</li><li>手套、圍巾、帽子</li><li>防滑好走的鞋（龍宮寺階梯）</li></ul></div>`}};
+function go(){const h=(location.hash||'#overview').slice(1),k=R[h]?h:'overview';V.innerHTML=R[k]();NV.innerHTML=tabs.map(t=>`<a href="#${t[0]}" class="${t[0]==k?'on':''}"><span>${t[1]}</span>${t[2]}</a>`).join('');window.scrollTo(0,0)}
+V.addEventListener('click',e=>{const b=e.target.closest('[data-d]');if(b){day=+b.dataset.d;V.innerHTML=R.itin()}});
+V.addEventListener('change',e=>{const k=e.target.dataset.k;if(!k)return;ls(k,e.target.checked?'1':'0');const all=V.querySelectorAll('[data-k]'),n=[...all].filter(x=>x.checked).length;document.getElementById('pg').textContent=n+' / '+all.length+' 完成';document.getElementById('pb').style.width=(n/all.length*100)+'%'});
+document.getElementById('th').onclick=()=>{const r=document.documentElement,d=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;r.dataset.theme=d?'light':'dark'};
+addEventListener('hashchange',go);go();
+</script></body></html>
